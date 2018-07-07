@@ -2,6 +2,15 @@ const context = new (window.AudioContext || window.webkitAudioContext)();
 
 context.destination.nodeIndex = 0;
 
+if (context.state !== "running") {
+  let resumeHandler = () => {
+    context.resume();
+    document.removeEventListener("click", resumeHandler);
+  };
+
+  document.addEventListener("click", resumeHandler);
+}
+
 const nodes = [context.destination];
 
 const createNode = node => {
