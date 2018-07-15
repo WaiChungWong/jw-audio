@@ -45,6 +45,8 @@ const createNode = node => {
   return node;
 };
 
+export const isReady = () => context.state === "running";
+
 export const destination = context.destination;
 
 export const createMediaSource = url => {
