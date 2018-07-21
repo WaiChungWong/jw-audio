@@ -49,12 +49,22 @@ export const isReady = () => context.state === "running";
 
 export const destination = context.destination;
 
-export const createMediaSource = url => {
+export const createMediaSource = (url, timeout) => {
   return new Promise((resolve, reject) => {
     let element = document.createElement("audio");
     let source = null;
+    let timer;
 
-    element.addEventListener("canplaythrough", () => {
+    if (timeout) {
+      timer = setTimeout(
+        () => reject(`loading media source timed out: '${url}'`),
+        timeout
+      );
+    }
+
+    let onSourceReady = () => {
+      clearTimeout(timer);
+
       if (source === null) {
         source = context.createMediaElementSource(element);
 
@@ -80,7 +90,9 @@ export const createMediaSource = url => {
       }
 
       resolve(createNode(source));
-    });
+    };
+
+    element.addEventListener("canplaythrough", onSourceReady);
 
     element.addEventListener("error", () => {
       reject(`error loading media source: '${url}'`);
@@ -93,6 +105,10 @@ export const createMediaSource = url => {
     sourceElement.type = "audio/" + extension;
 
     element.appendChild(sourceElement);
+
+    if (element.readyState > 3) {
+      onSourceReady();
+    }
   });
 };
 
