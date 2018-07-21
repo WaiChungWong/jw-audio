@@ -56,10 +56,13 @@ export const createMediaSource = (url, timeout) => {
     let timer;
 
     if (timeout) {
-      timer = setTimeout(
-        () => reject(`loading media source timed out: '${url}'`),
-        timeout
-      );
+      timer = setTimeout(() => {
+        if (element.readyState > 3) {
+          onSourceReady();
+        } else {
+          reject(`loading media source timed out: '${url}'`);
+        }
+      }, timeout);
     }
 
     let onSourceReady = () => {
