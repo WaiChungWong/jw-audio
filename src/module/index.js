@@ -52,6 +52,7 @@ export const destination = context.destination;
 export const createMediaSource = (url, timeout) => {
   return new Promise((resolve, reject) => {
     let element = document.createElement("audio");
+    element.preload = "auto";
     let source = null;
     let timer;
 

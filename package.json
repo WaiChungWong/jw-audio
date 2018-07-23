@@ -1,9 +1,9 @@
 {
   "name": "jw-audio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A class which controls and manages the audio context.",
   "author": "john wong <johnwongwwc@gmail.com>",
-  "homepage": "http://https://waichungwong.github.io/jw-audio/build",
+  "homepage": "https://waichungwong.github.io/jw-audio/build",
   "keywords": [
     "audio",
     "sound"
