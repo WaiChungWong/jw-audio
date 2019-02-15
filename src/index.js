@@ -90,33 +90,30 @@ class Demo extends Component {
 
     return (
       <div ref={d => (this.demo = d)} id="demo">
-        {guitarSource &&
-          guitarGain &&
-          guitarAnalyser && (
-            <div className="channel">
-              <Source node={guitarSource} />
-              <Gain node={guitarGain} />
-              <Analyser node={guitarAnalyser} />
-            </div>
-          )}
-        {pianoSource &&
-          pianoGain &&
-          pianoAnalyser && (
-            <div className="channel">
-              <Source node={pianoSource} />
-              <Gain node={pianoGain} />
-              <Analyser node={pianoAnalyser} />
-            </div>
-          )}
-        {liveSource &&
-          liveGain &&
-          liveAnalyser && (
-            <div className="channel">
-              <div className="node">Live </div>
-              <Gain node={liveGain} />
-              <Analyser node={liveAnalyser} />
-            </div>
-          )}
+        {guitarSource && guitarGain && guitarAnalyser && (
+          <div className="channel">
+            <hr />
+            <Source node={guitarSource} />
+            <Gain node={guitarGain} />
+            <Analyser node={guitarAnalyser} />
+          </div>
+        )}
+        {pianoSource && pianoGain && pianoAnalyser && (
+          <div className="channel">
+            <hr />
+            <Source node={pianoSource} />
+            <Gain node={pianoGain} />
+            <Analyser node={pianoAnalyser} />
+          </div>
+        )}
+        {liveSource && liveGain && liveAnalyser && (
+          <div className="channel">
+            <hr />
+            <div className="node">Live </div>
+            <Gain node={liveGain} />
+            <Analyser node={liveAnalyser} />
+          </div>
+        )}
       </div>
     );
   }

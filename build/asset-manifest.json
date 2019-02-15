@@ -1,8 +1,15 @@
 {
-  "main.css": "static/css/main.05ec2f4f.css",
-  "main.css.map": "static/css/main.05ec2f4f.css.map",
-  "main.js": "static/js/main.4d7094d6.js",
-  "main.js.map": "static/js/main.4d7094d6.js.map",
-  "static/media/guitar.mp3": "static/media/guitar.2ef78c16.mp3",
-  "static/media/piano.mp3": "static/media/piano.498b718c.mp3"
+  "main.css": "/jw-audio/build/static/css/main.a11dcfdb.chunk.css",
+  "main.js": "/jw-audio/build/static/js/main.8b73ba9c.chunk.js",
+  "main.js.map": "/jw-audio/build/static/js/main.8b73ba9c.chunk.js.map",
+  "runtime~main.js": "/jw-audio/build/static/js/runtime~main.625f0f60.js",
+  "runtime~main.js.map": "/jw-audio/build/static/js/runtime~main.625f0f60.js.map",
+  "static/js/2.c13ad804.chunk.js": "/jw-audio/build/static/js/2.c13ad804.chunk.js",
+  "static/js/2.c13ad804.chunk.js.map": "/jw-audio/build/static/js/2.c13ad804.chunk.js.map",
+  "index.html": "/jw-audio/build/index.html",
+  "precache-manifest.34c4684bafbfc183ec8c398c890b779f.js": "/jw-audio/build/precache-manifest.34c4684bafbfc183ec8c398c890b779f.js",
+  "service-worker.js": "/jw-audio/build/service-worker.js",
+  "static/css/main.a11dcfdb.chunk.css.map": "/jw-audio/build/static/css/main.a11dcfdb.chunk.css.map",
+  "static/media/guitar.mp3": "/jw-audio/build/static/media/guitar.2ef78c16.mp3",
+  "static/media/piano.mp3": "/jw-audio/build/static/media/piano.498b718c.mp3"
 }
